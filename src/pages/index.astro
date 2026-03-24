@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import diana from '../assets/diana.png';
+---
+
+<BaseLayout title="Diana — Home">
+  <section class="py-8">
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center gap-6">
+        <Image src={diana} alt="Diana" class="w-24 h-24 rounded-full object-cover ring-2 ring-indigo-500" />
+        <div>
+          <h1 class="text-4xl font-bold tracking-tight text-white mb-2">Hi, I'm Diana Galván</h1>
+          <p class="text-indigo-400 text-lg">Writer · Photographer · Explorer</p>
+        </div>
+      </div>
+
+      <p class="text-gray-300 leading-relaxed text-lg max-w-xl">
+        I'm a passionate storyteller who finds beauty in everyday moments. Through writing and photography,
+        I capture the world as I see it — full of color, texture, and quiet wonder.
+      </p>
+
+      <p class="text-gray-400 leading-relaxed">
+        When I'm not behind a camera or at my desk writing, you'll find me hiking mountain trails,
+        exploring local coffee shops, or curled up with a good book. This website is my little corner
+        of the internet — a place to share thoughts, images, and the occasional rambling.
+      </p>
+
+      <div class="flex gap-4 pt-2">
+        <a href="/blog" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors">
+          Read the Blog
+        </a>
+        <a href="/photography" class="inline-flex items-center gap-2 border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors">
+          View Photos
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

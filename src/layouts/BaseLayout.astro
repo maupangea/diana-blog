@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Diana\'s personal website and blog' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+    <header class="border-b border-gray-800">
+      <nav class="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-lg font-semibold tracking-tight text-white hover:text-indigo-400 transition-colors">
+          Diana
+        </a>
+        <ul class="flex gap-6 text-sm text-gray-400">
+          <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="/photography" class="hover:text-white transition-colors">Photography</a></li>
+          <li><a href="/contact" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-1 max-w-3xl mx-auto w-full px-6 py-12">
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-800">
+      <div class="max-w-3xl mx-auto px-6 py-6 text-center text-sm text-gray-600">
+        &copy; {new Date().getFullYear()} Diana. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
