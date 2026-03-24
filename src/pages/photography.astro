@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import placeholder from '../assets/placeholder.png';
 import ciudad from '../assets/ciudad.png';
+import ecuador from '../assets/ecuador.png';
 ---
 
 <BaseLayout title="Photography — Diana" description="A visual journey through Diana's lens.">
@@ -15,7 +16,7 @@ import ciudad from '../assets/ciudad.png';
         <Image src={ciudad} alt="Ciudad en blanco y negro" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
       </div>
       <div class="overflow-hidden rounded-xl border border-gray-800">
-        <Image src={placeholder} alt="Misty forest path in the morning" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+        <Image src={ecuador} alt="Foto de Ecuador en blanco y negro" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
       </div>
       <div class="overflow-hidden rounded-xl border border-gray-800">
         <Image src={placeholder} alt="Golden hour over the city skyline" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
