@@ -9,23 +9,23 @@ const posts = (await getCollection('blog')).sort(
 
 <BaseLayout title="Blog — Diana" description="Thoughts, stories, and ideas from Diana.">
   <div>
-    <h1 class="text-3xl font-bold tracking-tight text-white mb-2">Blog</h1>
-    <p class="text-gray-400 mb-10">Thoughts, stories, and ideas.</p>
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">Blog</h1>
+    <p class="text-gray-500 dark:text-gray-400 mb-10">Thoughts, stories, and ideas.</p>
 
     {posts.length === 0 ? (
-      <p class="text-gray-500">No posts yet. Check back soon!</p>
+      <p class="text-gray-400 dark:text-gray-500">No posts yet. Check back soon!</p>
     ) : (
       <ul class="flex flex-col gap-6">
         {posts.map((post) => (
           <li>
-            <a href={`/blog/${post.id}`} class="group block p-6 rounded-xl border border-gray-800 hover:border-indigo-700 transition-colors">
-              <time class="text-xs text-gray-500 uppercase tracking-wide">
+            <a href={`/blog/${post.id}`} class="group block p-6 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-indigo-400 dark:hover:border-indigo-700 transition-colors">
+              <time class="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wide">
                 {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </time>
-              <h2 class="mt-1 text-xl font-semibold text-white group-hover:text-indigo-400 transition-colors">
+              <h2 class="mt-1 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                 {post.data.title}
               </h2>
-              <p class="mt-2 text-gray-400 text-sm leading-relaxed">{post.data.description}</p>
+              <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{post.data.description}</p>
             </a>
           </li>
         ))}

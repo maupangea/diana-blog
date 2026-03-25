@@ -17,22 +17,22 @@ const photos = [ciudad, ecuador, tuxpan];
 
 <BaseLayout title="Diana Galván — Home">
   <!-- Bio -->
-  <section class="py-8 border-b border-gray-800 mb-12">
+  <section class="py-8 border-b border-gray-200 dark:border-gray-800 mb-12">
     <div class="flex flex-col gap-6">
       <div class="flex items-center gap-6">
         <Image src={diana} alt="Diana" class="w-24 h-24 rounded-full object-cover ring-2 ring-indigo-500" />
         <div>
-          <h1 class="text-4xl font-bold tracking-tight text-white mb-2">Hi, I'm Diana Galván</h1>
-          <p class="text-indigo-400 text-lg">Historian and Philosopher of Science · Photographer · Writer</p>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">Hi, I'm Diana Galván</h1>
+          <p class="text-indigo-600 dark:text-indigo-400 text-lg">Historian and Philosopher of Science · Photographer · Writer</p>
         </div>
       </div>
 
-      <p class="text-gray-300 leading-relaxed text-lg max-w-xl">
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg max-w-xl">
         I'm a passionate storyteller who finds beauty in everyday moments. Through writing and photography,
         I capture the world as I see it — full of color, texture, and quiet wonder.
       </p>
 
-      <p class="text-gray-400 leading-relaxed">
+      <p class="text-gray-500 dark:text-gray-400 leading-relaxed">
         When I'm not behind a camera or at my desk writing, you'll find me hiking mountain trails,
         exploring local coffee shops, or curled up with a good book. This website is my little corner
         of the internet — a place to share thoughts, images, and the occasional rambling.
@@ -42,39 +42,39 @@ const photos = [ciudad, ecuador, tuxpan];
 
   <!-- CV Preview -->
   <section class="mb-14">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">CV</h2>
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">CV</h2>
     <div class="space-y-8">
 
       <!-- Last education -->
       <div>
-        <h3 class="text-xs font-medium uppercase tracking-widest text-gray-600 mb-3">Education</h3>
+        <h3 class="text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-600 mb-3">Education</h3>
         <div class="flex gap-4">
-          <span class="text-gray-600 text-sm w-28 shrink-0">2022 – 2026</span>
+          <span class="text-gray-400 dark:text-gray-600 text-sm w-28 shrink-0">2022 – 2026</span>
           <div>
-            <p class="text-white font-medium">Master in History and Philosophy of Science</p>
-            <p class="text-gray-400 text-sm">Universidad Nacional Autónoma de México</p>
+            <p class="text-gray-900 dark:text-white font-medium">Master in History and Philosophy of Science</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Universidad Nacional Autónoma de México</p>
           </div>
         </div>
       </div>
 
       <!-- Last experience -->
       <div>
-        <h3 class="text-xs font-medium uppercase tracking-widest text-gray-600 mb-3">Experience</h3>
+        <h3 class="text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-600 mb-3">Experience</h3>
         <div class="flex gap-4">
-          <span class="text-gray-600 text-sm w-28 shrink-0">2023 – present</span>
+          <span class="text-gray-400 dark:text-gray-600 text-sm w-28 shrink-0">2023 – present</span>
           <div>
-            <p class="text-white font-medium">Staff Writer</p>
-            <p class="text-gray-400 text-sm">Revista Surcos</p>
+            <p class="text-gray-900 dark:text-white font-medium">Staff Writer</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Revista Surcos</p>
           </div>
         </div>
       </div>
 
       <!-- Last two publications -->
       <div>
-        <h3 class="text-xs font-medium uppercase tracking-widest text-gray-600 mb-3">Selected Publications</h3>
+        <h3 class="text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-600 mb-3">Selected Publications</h3>
         <ul class="space-y-1 text-sm">
           <li>
-            <a href="https://surcos.com.mx/el-retorno/" class="text-indigo-400 hover:text-indigo-300 transition-colors" target="_blank" rel="noopener noreferrer">
+            <a href="https://surcos.com.mx/el-retorno/" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" target="_blank" rel="noopener noreferrer">
               "El retorno" — Revista Surcos, 2026
             </a>
           </li>
@@ -83,7 +83,7 @@ const photos = [ciudad, ecuador, tuxpan];
     </div>
 
     <div class="mt-6">
-      <a href="/cv" class="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-white transition-colors">
+      <a href="/cv" class="inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
         Full CV →
       </a>
     </div>
@@ -91,20 +91,20 @@ const photos = [ciudad, ecuador, tuxpan];
 
   <!-- Blog Preview -->
   <section class="mb-14">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">Latest Posts</h2>
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">Latest Posts</h2>
     {recentPosts.length === 0 ? (
-      <p class="text-gray-500 text-sm">No posts yet.</p>
+      <p class="text-gray-400 dark:text-gray-500 text-sm">No posts yet.</p>
     ) : (
       <ul class="flex flex-col gap-4">
         {recentPosts.map((post) => (
           <li>
             <a href={`/blog/${post.id}`} class="group flex items-start gap-4">
-              <time class="text-xs text-gray-600 w-28 shrink-0 pt-0.5">
+              <time class="text-xs text-gray-400 dark:text-gray-600 w-28 shrink-0 pt-0.5">
                 {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
               </time>
               <div>
-                <p class="text-white text-sm font-medium group-hover:text-indigo-400 transition-colors">{post.data.title}</p>
-                <p class="text-gray-500 text-sm mt-0.5">{post.data.description}</p>
+                <p class="text-gray-900 dark:text-white text-sm font-medium group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{post.data.title}</p>
+                <p class="text-gray-500 dark:text-gray-500 text-sm mt-0.5">{post.data.description}</p>
               </div>
             </a>
           </li>
@@ -112,7 +112,7 @@ const photos = [ciudad, ecuador, tuxpan];
       </ul>
     )}
     <div class="mt-6">
-      <a href="/blog" class="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-white transition-colors">
+      <a href="/blog" class="inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
         All posts →
       </a>
     </div>
@@ -120,16 +120,16 @@ const photos = [ciudad, ecuador, tuxpan];
 
   <!-- Photography Preview -->
   <section class="mb-8">
-    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-6">Photography</h2>
+    <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">Photography</h2>
     <div class="grid grid-cols-3 gap-3">
       {photos.map((photo, i) => (
-        <div class="overflow-hidden rounded-xl border border-gray-800">
+        <div class="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800">
           <Image src={photo} alt={`Photo ${i + 1}`} class="w-full h-32 object-cover hover:scale-105 transition-transform duration-300" />
         </div>
       ))}
     </div>
     <div class="mt-6">
-      <a href="/photography" class="inline-flex items-center gap-1 text-sm text-gray-400 hover:text-white transition-colors">
+      <a href="/photography" class="inline-flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
         All photos →
       </a>
     </div>

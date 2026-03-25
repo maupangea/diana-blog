@@ -5,26 +5,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="CV — Diana Galván" description="Curriculum vitae of Diana Galván.">
   <div class="space-y-12">
     <div>
-      <h1 class="text-3xl font-bold tracking-tight text-white mb-1">Diana Galván</h1>
-      <p class="text-indigo-400">Historian and Philosopher of Science · Photographer · Writer</p>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-1">Diana Galván</h1>
+      <p class="text-indigo-600 dark:text-indigo-400">Historian and Philosopher of Science · Photographer · Writer</p>
     </div>
 
     <!-- Education -->
     <section>
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Education</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4">Education</h2>
       <div class="space-y-6">
         <div class="flex gap-4">
-          <span class="text-gray-600 text-sm w-28 shrink-0">2022 – 2026</span>
+          <span class="text-gray-400 dark:text-gray-600 text-sm w-28 shrink-0">2022 – 2026</span>
           <div>
-            <p class="text-white font-medium">Master in History and Philosophy of Science</p>
-            <p class="text-gray-400 text-sm">Universidad Nacional Autónoma de México</p>
+            <p class="text-gray-900 dark:text-white font-medium">Master in History and Philosophy of Science</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Universidad Nacional Autónoma de México</p>
           </div>
         </div>
         <div class="flex gap-4">
-          <span class="text-gray-600 text-sm w-28 shrink-0">2018 – 2022</span>
+          <span class="text-gray-400 dark:text-gray-600 text-sm w-28 shrink-0">2018 – 2022</span>
           <div>
-            <p class="text-white font-medium">Bachelor's in History</p>
-            <p class="text-gray-400 text-sm">Instituto Mora</p>
+            <p class="text-gray-900 dark:text-white font-medium">Bachelor's in History</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Instituto Mora</p>
           </div>
         </div>
       </div>
@@ -32,22 +32,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <!-- Experience -->
     <section>
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Experience</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4">Experience</h2>
       <div class="space-y-6">
         <div class="flex gap-4">
-          <span class="text-gray-600 text-sm w-28 shrink-0">2023 – present</span>
+          <span class="text-gray-400 dark:text-gray-600 text-sm w-28 shrink-0">2023 – present</span>
           <div>
-            <p class="text-white font-medium">Staff Writer</p>
-            <p class="text-gray-400 text-sm">Revista Surcos</p>
-            <p class="text-gray-500 text-sm mt-1">Longform journalism covering rural communities, migration, and land rights in Michoacán.</p>
+            <p class="text-gray-900 dark:text-white font-medium">Staff Writer</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Revista Surcos</p>
+            <p class="text-gray-400 dark:text-gray-500 text-sm mt-1">Longform journalism covering rural communities, migration, and land rights in Michoacán.</p>
           </div>
         </div>
         <div class="flex gap-4">
-          <span class="text-gray-600 text-sm w-28 shrink-0">2021 – 2023</span>
+          <span class="text-gray-400 dark:text-gray-600 text-sm w-28 shrink-0">2021 – 2023</span>
           <div>
-            <p class="text-white font-medium">Freelance Photographer</p>
-            <p class="text-gray-400 text-sm">Independent</p>
-            <p class="text-gray-500 text-sm mt-1">Documentary and editorial photography across Mexico and Latin America.</p>
+            <p class="text-gray-900 dark:text-white font-medium">Freelance Photographer</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">Independent</p>
+            <p class="text-gray-400 dark:text-gray-500 text-sm mt-1">Documentary and editorial photography across Mexico and Latin America.</p>
           </div>
         </div>
       </div>
@@ -55,10 +55,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <!-- Publications -->
     <section>
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Selected Publications</h2>
-      <ul class="space-y-2 text-sm text-gray-400">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4">Selected Publications</h2>
+      <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
         <li>
-          <a href="https://surcos.com.mx/el-retorno/" class="text-indigo-400 hover:text-indigo-300 transition-colors" target="_blank" rel="noopener noreferrer">
+          <a href="https://surcos.com.mx/el-retorno/" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors" target="_blank" rel="noopener noreferrer">
             "El retorno" — Revista Surcos, 2026
           </a>
         </li>
@@ -67,18 +67,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <!-- Skills -->
     <section>
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Skills</h2>
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4">Skills</h2>
       <div class="flex flex-wrap gap-2">
         {['Longform Writing', 'Documentary Photography', 'Field Research', 'Photo Editing', 'Spanish', 'English'].map(skill => (
-          <span class="px-3 py-1 rounded-full bg-gray-800 text-gray-300 text-sm">{skill}</span>
+          <span class="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm">{skill}</span>
         ))}
       </div>
     </section>
 
     <!-- Contact -->
     <section>
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4">Contact</h2>
-      <a href="/contact" class="text-indigo-400 hover:text-indigo-300 transition-colors text-sm">Get in touch →</a>
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-4">Contact</h2>
+      <a href="/contact" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors text-sm">Get in touch →</a>
     </section>
   </div>
 </BaseLayout>
