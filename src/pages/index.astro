@@ -2,28 +2,28 @@
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import diana from '../assets/diana.png';
-import ciudad from '../assets/ciudad.png';
-import ecuador from '../assets/ecuador.png';
-import tuxpan from '../assets/tuxpan.png';
+import mau from '../assets/mau.jpeg';
+import geometryPlant from '../assets/geometry-plant.jpeg';
+import iztacPopo from '../assets/iztac-popo.jpeg';
+import playaDelCarmen from '../assets/playa-del-carmen.jpeg';
 
 const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 const recentPosts = allPosts.slice(0, 3);
 
-const photos = [ciudad, ecuador, tuxpan];
+const photos = [geometryPlant, iztacPopo, playaDelCarmen];
 ---
 
-<BaseLayout title="Diana Galván — Home">
+<BaseLayout title="Mauricio Sandoval — Home">
   <!-- Bio -->
   <section class="py-8 border-b border-gray-200 dark:border-gray-800 mb-12">
     <div class="flex flex-col gap-6">
       <div class="flex items-center gap-6">
-        <Image src={diana} alt="Diana" class="w-24 h-24 rounded-full object-cover ring-2 ring-indigo-500" />
+        <Image src={mau} alt="Mauricio" class="w-24 h-24 rounded-full object-cover ring-2 ring-indigo-500" />
         <div>
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">Hi, I'm Diana Galván</h1>
-          <p class="text-indigo-600 dark:text-indigo-400 text-lg">Historian and Philosopher of Science · Photographer · Writer</p>
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">Hi, I'm Mauricio Sandoval</h1>
+          <p class="text-indigo-600 dark:text-indigo-400 text-lg">Mathematician · Senior Data Engineer · Entrepreneur</p>
         </div>
       </div>
 

@@ -1,4 +1,6 @@
-# diana-blog
+# personal-blog
+
+https://mauricio-sandoval-cuenca.vercel.app/
 
 A personal website and blog built with [Astro](https://astro.build), Tailwind CSS, and MDX. Fully static, zero client-side JavaScript, dark-mode by default.
 
